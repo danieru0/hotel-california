@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Antic+Didone|Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__menu">
+            <button class="menu__hamburger" id="hamburger-open">
+                <span class="fa fa-bars" aria-hidden="true"></span>
+                <span class="visuallyhidden">open menu</span>
+            </button>
+            <p>menu</p>
+        </div>
+        <ul class="menu__list" id="menu">
+            <div class="menu__list-wrapper">
+                <button class="menu__list--close" id="hamburger-close">
+                    <span class="fa fa-times fa-3x" aria-hidden="true"></span>
+                    <span class="visuallyhidden">close menu</span>
+                </button>
+                <li class="menu__list-item"><a href="#">Rooms and Apartments</a></li>
+                <li class="menu__list-item"><a href="#">Video presentation</a></li>
+                <li class="menu__list-item"><a href="#">Gallery</a></li>
+                <li class="menu__list-item"><a href="#">Contact</a></li>
+            </div>
+        </ul>
+        <a href="#"><img class="nav__logo" src="imgs/Logo.png"></a>
+        <div class="nav__options">
+            <button class="options-search">
+                <span class="fa fa-search" aria-hidden="true"></span>
+                <span class="visuallyhidden">search</span>
+            </button>
+            <button class="options__lang">
+                <span class="fa fa-sort-desc lang-arrow" aria-hidden="true"></span>
+                <span class="options-language">EN</span>
+                <span class="visuallyhidden">Select Language</span>
+                <div class="options__lang-dropdown_list">
+                    <a href="#">PL</a>
+                    <a href="#">RU</a>
+                </div>
+            </button>
+        </div>
+    </nav>
+    <header class="header" id="header">
+        <h1>Hotel California</h1>
+        <p>Five star hotel</p>
+        <button>
+            Read more
+            <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
+        </button>
+        <div class="header__options">
+            <div class="header__options__bubbles">
+                <span class="bubble" id="0">
+                    <span class="bubble__fill active">
+                    </span>
+                </span>
+                <span class="bubble" id="1">
+                    <span class="bubble__fill">
+                    </span>
+                </span>
+                <span class="bubble" id="2">
+                    <span class="bubble__fill">
+                    </span>
+                </span>
+            </div>
+            <div class="header__scroll">
+                <a href="#">
+                    <span class="fa fa-long-arrow-down" aria-hidden="true"></span>
+                    <p>Scroll down</p>
+                </a>
+            </div>
+        </div>
+    </header>
+<script src="js/main.js"></script>
+</body>
+
+</html>

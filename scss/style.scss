@@ -1,0 +1,342 @@
+@font-face {
+    font-family: Aqua;
+    src: url(fonts/aqua.ttf) format("truetype");
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+$yellow: #dfd171;
+$saturate-yellow: saturate($yellow, 20);
+$white: #ffffff;
+
+@mixin button($background, $color, $border) {
+    width: 142px;
+    height: 37px;
+    border: none;
+    background-color: $background;
+    color: $color;
+    border: 1px solid $border;
+    cursor: pointer;
+    font-family: Aqua;
+    transition: 0.3s;
+    span {
+        position: relative;
+        top: 1px;
+    }
+}
+
+//------------- NAV ..................
+.nav {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 1;
+    .nav__menu {
+        display: flex;
+        align-items: center;
+        margin-left: 67px;
+        .menu__hamburger {
+            border: none;
+            font-size: 24px;
+            background: transparent;
+            position: relative;
+            margin-bottom: 3px;
+            color: $yellow;
+            cursor: pointer;
+            transition: 0.2s;
+            z-index: 1;
+            &:hover {
+                color: $saturate-yellow;
+            }
+            &:focus {
+                color: $saturate-yellow;
+            }
+        }
+        p {
+            font-size: 22px;
+            text-transform: uppercase;
+            font-family: Aqua;
+            margin-left: 15px;
+            color: $white;
+        }
+    }
+    .menu__list {
+        height: 100vh;
+        top: 0;
+        z-index: 1;
+        background-color: #000000;
+        left: 0;
+        position: absolute;
+        transition: 0.5s ease-in-out; 
+        overflow: hidden;
+        width: 0px;
+        white-space: nowrap;
+        position: fixed;
+        .menu__list-wrapper {
+            position: relative;
+            margin-top: 100px;
+            margin-left: 10px;
+            .menu__list--close {
+                color: $yellow;
+                background: transparent;
+                border: none;
+                position: absolute;
+                left: 0;
+                top: -70px;
+                cursor: pointer;
+                &:hover, &:focus {
+                    color: $saturate-yellow;
+                }
+            }
+            .menu__list-item {
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-family: Aqua;
+                    font-size: 18px;
+                    line-height: 60px;
+                    transition: 0.2s;
+                    &:hover, &:focus {
+                        color: $saturate-yellow;
+                    }
+                }
+            }
+        }
+    }
+    .nav__logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 15px;
+    }
+    .nav__options {
+        display: flex;
+        align-items: center;
+        margin-right: 67px;
+        position: relative;
+        .options-search {
+            margin-right: 30px;
+            font-size: 21px;
+            background: transparent;
+            border: none;
+            position: relative;
+            bottom: 4px;
+            cursor: pointer;
+            color: $white;
+            transition: 0.2s;
+            &:hover {
+                color: $saturate-yellow;
+            }
+            &:hover {
+                color: $saturate-yellow;
+            }
+        }
+        .options__lang {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .lang-arrow {
+            color: $yellow;
+            font-size: 22px;
+            position: relative;
+            bottom: 2px;
+            right: 2px;
+        }
+        .options-language {
+            font-size: 22px;
+            font-family: Aqua;
+            color: $white;
+            &:hover, &:focus {
+                color: $saturate-yellow;
+            }
+        }
+        .options__lang-dropdown_list {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            right: 5px;
+            text-align: right;
+            line-height: 25px;
+            top: 25px;
+            width: 50px;
+            list-style: none;
+            a {
+                font-family: Aqua;
+                text-decoration: none;
+                font-size: 22px;
+                color: $white;
+                &:hover {
+                    color: $saturate-yellow;
+                }
+            }
+        }
+        .options__lang:hover {
+            .options__lang-dropdown_list {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 432px) {
+    .nav {
+        .nav__menu {
+            margin-left: 10px;
+            p {
+                display: none;
+            }
+        }
+        .nav__options {
+            margin-right: 10px;
+        }
+    }
+}
+
+//----------- HEADER ..................
+
+.header {
+    width: 100%;
+    height: 950px;
+    background-size: cover;
+    background-image: url("imgs/header-bg-0.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    h1 {
+        font-family: Aqua;
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        &::after {
+            content: "";
+            background-color: $yellow;
+            margin-top: 5px;
+            width: 200px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+        }
+    }
+    p {
+        font-size: 58px;
+        color: $white;
+        text-transform: uppercase;
+        font-family: Antic Didone;
+        letter-spacing: 5px;
+        margin-top: 40px;
+    }
+    button {
+        @include button($yellow, #000000, #92896a);
+        font-weight: bold;
+        margin-top: 57px;
+        &:hover, &:focus {
+            background-color: $saturate-yellow;
+        }
+    }
+    .header__options {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        .header__options__bubbles {
+            display: flex;
+            margin-left: 100px;
+            .bubble {
+                width: 20px;
+                height: 20px;
+                border: 2px solid $white;
+                border-radius: 10000px;
+                display: block;
+                position: relative;
+                cursor: pointer;
+                margin-left: 10px;
+                .bubble__fill {
+                    width: 10px;
+                    height: 10px;
+                    display: none;
+                    background-color: $yellow;
+                    border-radius: 100000px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    top: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                .bubble__fill.active {
+                    display: block;
+                }
+                &:hover {
+                    .bubble__fill {
+                        display: block;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+        .header__scroll {
+            margin-right: 100px;
+            margin-top: 5px;
+            span {
+                color: $yellow;
+                float: left;
+                position: relative;
+                right: 10px;
+                top: -3px;
+                font-size: 20px;
+            }
+            p {
+                float: right;
+                margin: 0;
+                font-size: 16px;
+                letter-spacing: normal;
+                font-family: Aqua;
+                text-transform: none;
+                transition: 0.3s;
+                &:hover {
+                    color: $saturate-yellow;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .header {
+        .header__options {
+            .header__options__bubbles {
+                margin-left: 10px;
+            }
+            .header__scroll {
+                margin-right: 10px;
+            }
+        }
+    }
+}
