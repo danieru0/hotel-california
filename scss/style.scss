@@ -187,7 +187,7 @@ $white: #ffffff;
                 }
             }
         }
-        .options__lang:hover {
+        .options__lang:hover, .options__lang:focus {
             .options__lang-dropdown_list {
                 display: flex;
             }
@@ -336,6 +336,318 @@ $white: #ffffff;
             }
             .header__scroll {
                 margin-right: 10px;
+            }
+        }
+    }
+}
+
+//----------- SECTION ROOMS ..............
+
+.rooms {
+    width: 100%;
+    height: 2400px;
+    .rooms__wrapper {
+        width: 1380px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        h2 {
+            font-family: Aqua;
+            color: #000000;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding-top: 40px;
+            text-align: center;
+            &::after {
+                content: "";
+                background-color: $yellow;
+                width: 380px;
+                height: 1px;
+                display: block;
+                margin-top: 5px;
+            }
+        }
+        .room {
+            width: 100%;
+            height: 572px;
+            position: relative;
+            .rooms__image {
+                width: 586px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                img {
+                    width: 586px;
+                    height: 489px;
+                    position: absolute;
+                    top: 0;
+                }
+                .rooms__image-carousel {
+                    position: absolute;
+                    bottom: 0;
+                    align-self: center;
+                    .carousel-button {
+                        background: transparent;
+                        border: none;
+                        color: $yellow;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        &:hover, &:focus {
+                            color: $saturate-yellow;
+                        }
+                    }
+                    .deluxe-number, .executive-number, .family-number {
+                        font-family: Montserrat;
+                        font-weight: bold;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                        position: relative;
+                        top: -10px;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                    .deluxe-number.active, .executive-number.active, .family-number.active {
+                        background-color: $yellow;
+                        padding: 8px;
+                        border-radius: 10000px;
+                        color: $white;
+                        font-size: 20px;
+                        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    .carousel-number {
+                        font-family: Montserrat;
+                        font-weight: bold;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                        position: relative;
+                        top: -10px;
+                        cursor: pointer;
+                    }
+                    .carousel-number.active {
+                        background-color: $yellow;
+                        padding: 8px;
+                        border-radius: 10000px;
+                        color: $white;
+                        font-size: 20px;
+                        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+            .rooms__desc {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                h3 {
+                    font-family: Antic Didone;
+                    font-weight: bold;
+                    font-size: 46px;
+                    letter-spacing: 2px;
+                    position: relative;
+                    margin-bottom: 40px;
+                    z-index: 1;
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        height: 50px;
+                        background-color: #000000;
+                        position: absolute;
+                        bottom: -65px;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                .desc {
+                    width: 585px;
+                    height: 390px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    border: 1px solid $yellow;
+                    p {
+                        font-family: Aqua;
+                        width: 440px;
+                    }
+                    &::before {
+                        content: "";
+                        background-color: $white;
+                        width: 50px;
+                        height: 1px;
+                        position: absolute;
+                        top: -1px;
+                    }
+                    &::after {
+                        content: "";
+                        background-color: $white;
+                        width: 200px;
+                        height: 1px;
+                        position: absolute;
+                        bottom: -1px;
+                    }
+                    button {
+                        @include button(transparent, $yellow, $yellow);
+                        position: absolute;
+                        bottom: -20px;
+                        z-index: 1;
+                        &:hover, &:focus {
+                            color: $white;
+                            background-color: $saturate-yellow;
+                        }
+                    }
+                }
+            }
+        }
+        .rooms__deluxe {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .rooms__image {
+                .deluxe-image {
+                    opacity: 0;
+                    transition: 1s;
+                }
+                .deluxe-image.active {
+                    opacity: 1;
+                }
+            }
+        }
+        .rooms__executive {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .rooms__image {
+                order: 2;
+                .executive-image {
+                    opacity: 0;
+                    transition: 1s;
+                }
+                .executive-image.active {
+                    opacity: 1;
+                }
+                
+            }
+        }
+        .rooms__family {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .rooms__image {
+                .family-image {
+                    opacity: 0;
+                    transition: 1s;
+                }
+                .family-image.active {
+                    opacity: 1;
+                }
+            }
+        }
+        .rooms__view-more {
+            @include button(transparent, #000000, #000000);
+            span {
+                position: relative;
+                top: -1px;
+                
+            }
+            &:hover, &:focus {
+                background-color: #000000;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (max-width: 1396px) {
+    .rooms {
+        .rooms__wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1190px) {
+    .rooms {
+        height: auto;
+        .rooms__wrapper {
+            h2 {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            .room {
+                height: 1200px;
+                justify-content: center;
+                flex-wrap: wrap;
+                .rooms__image {
+                    .rooms__image-carousel {
+                        top: 500px;
+                    }
+                }
+                .rooms__desc {
+                    height: auto;
+                    top: 60px;
+                }
+            }
+            .rooms__executive {
+                .rooms__image {
+                    order: unset;
+                }
+            }
+            .rooms__view-more {
+                position: relative;
+                bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 603px) {
+    .rooms {
+        .rooms__wrapper {
+            .room {
+                .rooms__image {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: 33%;
+                    }
+                    .rooms__image-carousel {
+                        top: 430px;
+                    }
+                }
+                .rooms__desc {
+                    top: 0px;
+                    width: 100%;
+                    .desc {
+                        width: 99.6%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    .rooms {
+        .rooms__wrapper {
+            h2 {
+                &::after {
+                    width: 220px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
     }
