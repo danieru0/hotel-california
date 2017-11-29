@@ -209,6 +209,10 @@
     width: 100%;
     height: 100px;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     bottom: 0;
     display: flex;
     justify-content: space-between; }
@@ -309,9 +313,13 @@
           position: absolute;
           top: 0; }
         .rooms .rooms__wrapper .room .rooms__image .rooms__image-carousel {
+          width: 586px;
           position: absolute;
           bottom: 0;
-          align-self: center; }
+          align-self: center;
+          text-align: center;
+          left: 0;
+          right: 0; }
           .rooms .rooms__wrapper .room .rooms__image .rooms__image-carousel .carousel-button {
             background: transparent;
             border: none;
@@ -405,6 +413,10 @@
             width: 50px;
             height: 1px;
             position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
             top: -1px; }
           .rooms .rooms__wrapper .room .rooms__desc .desc::after {
             content: "";
@@ -412,6 +424,10 @@
             width: 200px;
             height: 1px;
             position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
             bottom: -1px; }
           .rooms .rooms__wrapper .room .rooms__desc .desc button {
             width: 142px;
@@ -424,6 +440,10 @@
             font-family: Aqua;
             transition: 0.3s;
             position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
             bottom: -20px;
             z-index: 1; }
             .rooms .rooms__wrapper .room .rooms__desc .desc button span {
@@ -452,6 +472,8 @@
           transition: 1s; }
         .rooms .rooms__wrapper .rooms__executive .rooms__image .executive-image.active {
           opacity: 1; }
+        .rooms .rooms__wrapper .rooms__executive .rooms__image .rooms__image-carousel {
+          margin-left: auto; }
     .rooms .rooms__wrapper .rooms__family {
       display: flex;
       justify-content: space-between;
@@ -506,6 +528,11 @@
       position: relative;
       bottom: 40px; } }
 
+@media (max-width: 1174px) {
+  .rooms .rooms__wrapper .room .rooms__image-carousel {
+    margin-left: auto;
+    margin-right: auto; } }
+
 @media (max-width: 603px) {
   .rooms .rooms__wrapper .room .rooms__image {
     width: 100%; }
@@ -513,7 +540,8 @@
       width: 100%;
       height: 33%; }
     .rooms .rooms__wrapper .room .rooms__image .rooms__image-carousel {
-      top: 430px; }
+      top: 430px;
+      width: 100%; }
   .rooms .rooms__wrapper .room .rooms__desc {
     top: 0px;
     width: 100%; }
@@ -578,7 +606,11 @@
       bottom: -1px;
       background-image: url("imgs/video-bg.png");
       background-position: center center;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0; }
     .video .video__text button {
       width: 142px;
       height: 37px;
@@ -592,6 +624,10 @@
       font-weight: 700;
       position: absolute;
       bottom: -20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 1;
       font-size: 12px; }
       .video .video__text button span {

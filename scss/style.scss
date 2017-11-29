@@ -268,6 +268,10 @@ $white: #ffffff;
         width: 100%;
         height: 100px;
         position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
         bottom: 0;
         display: flex;
         justify-content: space-between;
@@ -392,9 +396,13 @@ $white: #ffffff;
                     top: 0;
                 }
                 .rooms__image-carousel {
+                    width: 586px;
                     position: absolute;
                     bottom: 0;
                     align-self: center;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
                     .carousel-button {
                         background: transparent;
                         border: none;
@@ -498,6 +506,10 @@ $white: #ffffff;
                         width: 50px;
                         height: 1px;
                         position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
                         top: -1px;
                     }
                     &::after {
@@ -506,6 +518,10 @@ $white: #ffffff;
                         width: 200px;
                         height: 1px;
                         position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
                         bottom: -1px;
                     }
                     button {
@@ -513,6 +529,10 @@ $white: #ffffff;
                         $yellow,
                         $yellow);
                         position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
                         bottom: -20px;
                         z-index: 1;
                         &:hover,
@@ -551,7 +571,9 @@ $white: #ffffff;
                 .executive-image.active {
                     opacity: 1;
                 }
-
+                .rooms__image-carousel {
+                    margin-left: auto;
+                }
             }
         }
         .rooms__family {
@@ -629,6 +651,19 @@ $white: #ffffff;
     }
 }
 
+@media (max-width: 1174px) {
+    .rooms {
+        .rooms__wrapper {
+            .room {
+                .rooms__image-carousel {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 603px) {
     .rooms {
         .rooms__wrapper {
@@ -641,6 +676,7 @@ $white: #ffffff;
                     }
                     .rooms__image-carousel {
                         top: 430px;
+                        width: 100%;
                     }
                 }
                 .rooms__desc {
@@ -726,12 +762,20 @@ $white: #ffffff;
             background-image: url("imgs/video-bg.png");
             background-position: center center;
             background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
         }
         button {
             @include button($yellow, #000000, #a29959);
             font-weight: 700;
             position: absolute;
             bottom: -20px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
             z-index: 1;
             font-size: 12px;
             span {
