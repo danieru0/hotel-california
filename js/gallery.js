@@ -7,7 +7,7 @@
         let boxNotHide = document.querySelectorAll('.gallery__content-box:not(.hide) .gallery__number');
         for (let i = 0; i < boxNotHide.length; i++) {
             boxNotHide[i].innerHTML = '0' + numbers[i];
-            if (i > 9) {
+            if (i >= 9) {
                 boxNotHide[i].innerHTML = numbers[i];
             }
         }
