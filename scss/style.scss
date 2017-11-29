@@ -44,7 +44,7 @@ $white: #ffffff;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
     .nav__menu {
         display: flex;
         align-items: center;
@@ -939,6 +939,154 @@ $white: #ffffff;
                     width: 98.9%;
                 }
             }
+        }
+    }
+}
+
+// ------------ CONTACT SECTION .................
+
+.contact {
+    width: 100%;
+    height: 731px;
+    display: flex;
+    position: relative;
+    .contact__text {
+        background-image: url("imgs/contact.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 24.8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-family: Aqua;
+            color: $white;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 30px;
+            text-transform: uppercase;
+            &::after {
+                content: "";
+                background-color: $yellow;
+                width: 135px;
+                height: 1px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+            }
+        }
+        .contact__text__info {
+            display: flex;
+            margin-top: 60px;
+            span {
+                color: $white;
+            }
+            address, p, a {
+                font-family: Aqua;
+                color: $white;
+                font-size: 12px;
+                position: relative;
+                left: 10px;
+                top: 15px;
+                line-height: 25px;
+                letter-spacing: 1.5px;
+            }
+            p {
+                width: 150px;
+                white-space: pre-line;
+            }
+            a {
+                transition: 0.3s;
+                text-decoration: none;
+                margin-top: -10px;
+                &:hover, &:focus {
+                    color: $saturate-yellow;
+                }
+                
+            }
+        }
+        .contact__text__info:first-of-type {
+            margin-top: 100px;
+        }
+        .contact__text__info:last-of-type {
+            margin-left: 60px;
+        }
+    }
+    .contact__feedback {
+        width: 130px;
+        height: 130px;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        bottom: 50px;
+        z-index: 1;
+        left: 21.4%;
+        border-radius: 50%;
+        .feedback__content {
+            width: 90px;
+            height: 90px;
+            background-color: #dfd171;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-family: Aqua;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+        }
+    }
+    .contact__map {
+        width: 75.2%;
+        height: 100%;
+        .contact__map__google {
+            width: 100%;
+            height: 731px;
+        }
+    }
+}
+
+@media (max-width: 1754px) {
+    .contact {
+        .contact__text {
+            width: 40%;
+        }
+        .contact__feedback {
+            left: 36.2%;
+        }
+        .contact__map {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 854px) {
+    .contact {
+        height: auto;
+        flex-direction: column;
+        .contact__text {
+            width: 100%;
+            height: 550px;
+            background-position: center;
+        }
+        .contact__feedback {
+            top: 485px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact__map {
+            width: 100%;
+            height: 731px;
         }
     }
 }
