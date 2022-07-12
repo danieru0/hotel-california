@@ -1,3 +1,3 @@
 # hotel-california
 
-LIVE: https://elosiktv.github.io/hotel-california/
+LIVE: https://danieru0.github.io/hotel-california/
